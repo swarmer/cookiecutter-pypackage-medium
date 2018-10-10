@@ -1,12 +1,9 @@
-{% if cookiecutter.use_pytest == 'y' -%}
-import pytest
-{% else %}
-import unittest
-{%- endif %}
+{% if cookiecutter.use_pytest == 'y' -%}import pytest{% else %}import unittest{%- endif %}
 
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 
 {%- if cookiecutter.use_pytest == 'y' %}
+
 
 @pytest.fixture
 def response():
