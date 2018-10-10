@@ -53,6 +53,9 @@ clean-test: ## remove test and coverage artifacts
 lint: ## check style
 	pylint {{ cookiecutter.project_slug }} tests
 
+typecheck: ## typecheck python code using mypy
+	mypy {{ cookiecutter.project_slug }} tests
+
 test: ## run tests quickly with the default Python
 {%- if cookiecutter.use_pytest == 'y' %}
 	py.test

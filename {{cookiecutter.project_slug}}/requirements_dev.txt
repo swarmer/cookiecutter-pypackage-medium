@@ -1,5 +1,6 @@
 bumpversion==0.5.3
 coverage==4.5.1
+mypy==0.630
 pip==9.0.1
 pylint==2.1.1
 {% if cookiecutter.use_pytest == 'y' -%}
