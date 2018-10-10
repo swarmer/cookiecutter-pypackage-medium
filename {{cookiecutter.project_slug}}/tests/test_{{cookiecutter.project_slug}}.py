@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""Tests for `{{ cookiecutter.project_slug }}` package."""
-
 {% if cookiecutter.use_pytest == 'y' -%}
 import pytest
 {% else %}
@@ -12,7 +7,6 @@ import unittest
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 
 {%- if cookiecutter.use_pytest == 'y' %}
-
 
 @pytest.fixture
 def response():
