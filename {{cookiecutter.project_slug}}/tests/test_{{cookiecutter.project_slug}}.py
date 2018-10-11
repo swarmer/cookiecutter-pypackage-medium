@@ -1,3 +1,4 @@
+# pylint: disable=redefined-outer-name
 {% if cookiecutter.use_pytest == 'y' -%}import pytest{% else %}import unittest{%- endif %}
 
 import {{ cookiecutter.project_slug }}
@@ -19,13 +20,13 @@ def test_content(response):
     """Sample pytest test function with the pytest fixture as an argument."""
     # from bs4 import BeautifulSoup
     # assert 'GitHub' in BeautifulSoup(response.content).title.string
+    assert response is None
+    assert {{ cookiecutter.project_slug }}
 
 {%- else %}
 
 
-class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
-    """Tests for `{{ cookiecutter.project_slug }}` package."""
-
+class TestExample(unittest.TestCase):
     def setUp(self):
         """Set up test fixtures, if any."""
 
@@ -34,4 +35,5 @@ class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
 
     def test_000_something(self):
         """Test something."""
+        assert {{cookiecutter.project_slug}}
 {%- endif %}

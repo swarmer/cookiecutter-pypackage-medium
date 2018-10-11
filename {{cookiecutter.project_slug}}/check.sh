@@ -25,4 +25,4 @@ pylint {{ cookiecutter.project_slug }} tests \
     && echo -e "${green}OK${normal}\n" \
     || exit 1
 
-echo 'All OK'
+echo "${green}All OK${normal}"
