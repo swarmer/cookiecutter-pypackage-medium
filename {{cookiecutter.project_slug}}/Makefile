@@ -54,7 +54,7 @@ lint: ## check style
 	pylint {{ cookiecutter.project_slug }} tests
 
 typecheck: ## typecheck python code using mypy
-	mypy {{ cookiecutter.project_slug }} tests
+	mypy --ignore-missing-imports {{ cookiecutter.project_slug }} tests
 
 test: ## run tests quickly with the default Python
 {%- if cookiecutter.use_pytest == 'y' %}
@@ -62,6 +62,9 @@ test: ## run tests quickly with the default Python
 {%- else %}
 	python setup.py test
 {%- endif %}
+
+check: ## Check everything (tests, lint, types)
+	bash check.sh
 
 test-all: ## run tests on every Python version with tox
 	tox
