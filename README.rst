@@ -37,6 +37,7 @@ Then:
 * Create a repo and put it there.
 * Add the repo to your Travis-CI_ account.
 * Install the dev requirements into a virtualenv. (``pip install -r requirements_dev.txt``)
+* Install the project into your environment. (``pip install -e .``)
 * Register_ your project with PyPI.
 * Add the repo to your ReadTheDocs_ account + turn on the ReadTheDocs service hook.
 * Add a `requirements.txt` file that specifies the packages you will need for
