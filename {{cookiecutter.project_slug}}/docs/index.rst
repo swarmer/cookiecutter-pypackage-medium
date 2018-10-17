@@ -9,7 +9,7 @@ Contents
 
    installation
    usage
-   api_docs
+   {{ cookiecutter.project_slug }}
    history
 
 
