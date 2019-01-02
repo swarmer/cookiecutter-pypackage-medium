@@ -60,7 +60,7 @@ test: ## run tests quickly with the default Python
 {%- if cookiecutter.use_pytest == 'y' %}
 	py.test
 {%- else %}
-	python setup.py test
+	python -m unittest
 {%- endif %}
 
 check: ## Check everything (tests, lint, types)
@@ -73,7 +73,7 @@ coverage: ## check code coverage quickly with the default Python
 {%- if cookiecutter.use_pytest == 'y' %}
 	coverage run --source {{ cookiecutter.project_slug }} -m pytest
 {%- else %}
-	coverage run --source {{ cookiecutter.project_slug }} setup.py test
+	coverage run --source {{ cookiecutter.project_slug }} -m unittest
 {%- endif %}
 	coverage report -m
 	coverage html

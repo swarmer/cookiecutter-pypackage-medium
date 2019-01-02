@@ -15,7 +15,7 @@ echo "${bold}tests${normal}"
 {%- if cookiecutter.use_pytest == 'y' %}
 py.test
 {%- else %}
-python setup.py test{%- endif %} \
+python -m unittest{%- endif %} \
     && echo "${green}OK${normal}" \
     || exit 1
 echo
