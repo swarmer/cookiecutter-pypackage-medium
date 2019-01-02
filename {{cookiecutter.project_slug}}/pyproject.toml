@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.project_short_description }}"
+authors = ["{{ cookiecutter.full_name.replace('\"', '\\\"') }} <{{ cookiecutter.email }}>"]
+license = "{{ cookiecutter.open_source_license }}"
+packages = [
+    { include = "{{ cookiecutter.project_slug }}" },
+]
+include = ["LICENSE"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+pudb = "*"
+ipython = "*"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
