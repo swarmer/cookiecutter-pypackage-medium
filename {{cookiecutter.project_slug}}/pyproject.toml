@@ -10,7 +10,7 @@ packages = [
 include = ["LICENSE"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = ">3.6"
 
 [tool.poetry.dev-dependencies]
 bumpversion = "^0.5.3"
@@ -19,8 +19,7 @@ ipython = "*"
 mypy = "^0.650.0"
 pudb = "*"
 pylint = "^2.2"
-{% if cookiecutter.use_pytest == 'y' -%}
-pytest = "^4.0"
+{% if cookiecutter.use_pytest == 'y' -%}pytest = "^4.0"
 pytest-runner = "^4.2"{% endif %}
 Sphinx = "^1.8"
 sphinxcontrib-apidoc = "^0.3.0"
