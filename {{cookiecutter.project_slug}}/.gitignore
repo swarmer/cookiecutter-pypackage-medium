@@ -91,6 +91,7 @@ venv/
 ENV/
 env2/
 env3/
+env*/
 
 # Spyder project settings
 .spyderproject

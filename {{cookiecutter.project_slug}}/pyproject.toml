@@ -24,7 +24,7 @@ docs = ["Sphinx", "sphinxcontrib-apidoc", "sphinxcontrib-fulltoc"]
 bumpversion = "^0.5.3"
 coverage = "^4.5"
 ipython = "*"
-mypy = "^0.650.0"
+mypy = "*"
 pudb = "*"
 pylint = "^2.2"
 {% if cookiecutter.use_pytest == 'y' -%}pytest = "^4.0"
