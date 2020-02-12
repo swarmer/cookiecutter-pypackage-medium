@@ -2,8 +2,12 @@
 disable=
     attribute-defined-outside-init,
     bad-continuation,
+    duplicate-code,
     fixme,
     missing-docstring,
+    no-else-raise,
+    no-else-return,
+    no-member,
     no-self-use,
     too-few-public-methods,
     unnecessary-pass,
