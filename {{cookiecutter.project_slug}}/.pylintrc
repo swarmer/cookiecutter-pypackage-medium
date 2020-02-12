@@ -9,3 +9,7 @@ disable=
     unnecessary-pass,
     unused-wildcard-import,
     wildcard-import
+
+
+[FORMAT]
+good-names=i,j,k,df,ex,exc,id,ok,x,y,z,T
