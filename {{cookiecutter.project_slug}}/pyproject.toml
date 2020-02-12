@@ -5,7 +5,7 @@ description = "{{ cookiecutter.project_short_description }}"
 authors = ["{{ cookiecutter.full_name.replace('\"', '\\\"') }} <{{ cookiecutter.email }}>"]
 license = "{{ cookiecutter.open_source_license }}"
 packages = [
-    { include = "{{ cookiecutter.project_slug }}" },
+    { include = "{{ cookiecutter.project_slug }}", from = "src"},
 ]
 include = ["LICENSE"]
 
@@ -21,7 +21,6 @@ sphinxcontrib-fulltoc = { version = "^1.2", optional = true }
 docs = ["Sphinx", "sphinxcontrib-apidoc", "sphinxcontrib-fulltoc"]
 
 [tool.poetry.dev-dependencies]
-bumpversion = "^0.5.3"
 coverage = "^4.5"
 ipython = "*"
 mypy = "*"

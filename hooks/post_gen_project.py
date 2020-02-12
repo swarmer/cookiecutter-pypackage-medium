@@ -9,8 +9,5 @@ def remove_file(filepath):
 
 
 if __name__ == '__main__':
-    if '{{ cookiecutter.use_pytest }}' == 'y':
-        remove_file('tests/__init__.py')
-
     if 'Not open source' == '{{ cookiecutter.open_source_license }}':
         remove_file('LICENSE')

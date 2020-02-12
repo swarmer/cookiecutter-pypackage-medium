@@ -51,10 +51,10 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style
-	pylint {{ cookiecutter.project_slug }} tests
+	pylint src/{{ cookiecutter.project_slug }} tests
 
 typecheck: ## typecheck python code using mypy
-	mypy --ignore-missing-imports {{ cookiecutter.project_slug }} tests
+	mypy --ignore-missing-imports src/{{ cookiecutter.project_slug }} tests
 
 test: ## run tests quickly with the default Python
 {%- if cookiecutter.use_pytest == 'y' %}
@@ -71,9 +71,9 @@ test-all: ## run tests on every Python version with tox
 
 coverage: ## check code coverage quickly with the default Python
 {%- if cookiecutter.use_pytest == 'y' %}
-	coverage run --source {{ cookiecutter.project_slug }} -m pytest
+	coverage run --source src -m pytest
 {%- else %}
-	coverage run --source {{ cookiecutter.project_slug }} -m unittest
+	coverage run --source src -m unittest
 {%- endif %}
 	coverage report -m
 	coverage html

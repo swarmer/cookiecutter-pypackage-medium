@@ -14,7 +14,6 @@ Features
 * Testing setup with ``unittest`` and ``python setup.py test`` or ``py.test``
 * Tox_ testing: Setup to easily test for different python versions
 * Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
-* Bumpversion_: Pre-configured version bumping with a single command
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 
@@ -54,6 +53,5 @@ Based on https://github.com/audreyr/cookiecutter-pypackage
 .. _Tox: http://testrun.org/tox/
 .. _Sphinx: http://sphinx-doc.org/
 .. _ReadTheDocs: https://readthedocs.io/
-.. _Bumpversion: https://github.com/peritus/bumpversion
 .. _Punch: https://github.com/lgiordani/punch
 .. _PyPi: https://pypi.python.org/pypi

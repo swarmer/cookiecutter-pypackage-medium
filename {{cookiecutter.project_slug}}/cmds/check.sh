@@ -6,7 +6,7 @@ green=$(tput setaf 2)
 normal=$(tput sgr0)
 
 echo "${bold}mypy${normal}"
-mypy --ignore-missing-imports {{ cookiecutter.project_slug }} tests \
+mypy --ignore-missing-imports src/{{ cookiecutter.project_slug }} tests \
     && echo "${green}OK${normal}" \
     || exit 1
 echo
@@ -21,7 +21,7 @@ python -m unittest{%- endif %} \
 echo
 
 echo "${bold}pylint${normal}"
-pylint {{ cookiecutter.project_slug }} tests \
+pylint src/{{ cookiecutter.project_slug }} tests \
     && echo -e "${green}OK${normal}\n" \
     || exit 1
 

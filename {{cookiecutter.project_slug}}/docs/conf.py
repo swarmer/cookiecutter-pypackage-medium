@@ -37,7 +37,7 @@ extensions = [
     'sphinxcontrib.fulltoc', 'sphinxcontrib.apidoc',
 ]
  # apidoc settings
-apidoc_module_dir = '../{{ cookiecutter.project_slug }}'
+apidoc_module_dir = '../src/{{ cookiecutter.project_slug }}'
 apidoc_output_dir = '.'
 apidoc_excluded_paths = []
 apidoc_separate_modules = False
@@ -168,6 +168,3 @@ texinfo_documents = [
      'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
